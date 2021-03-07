@@ -5,12 +5,14 @@ test('Calculator divide 2 by  2 to equal 1', () => {
     let result = calc.Divide(2,2);
     expect(result).toBe(1);
     expect(calc.Result).toBe(1);
+    console.log(result)
 
 });
-test('Calculator Add 2 by  2 to equal 4', () => {
+test('Calculator Add 2 by  2 to equal 5', () => {
     let calc = new Calculator();
-    expect(calc.Sum(2, 3)).toBe(5);
-    expect(calc.Result).toBe(5);
+    expect(calc.Sum(2, 30)).toBe(32);
+    expect(calc.Result).toBe(32);
+    console.log(calc.Result)
 
 });
 test('Calculator Multiply 2 by  2 has a result equal to 4', () => {
