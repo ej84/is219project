@@ -1,13 +1,9 @@
 const MathOperations = require('./Operations/MathOperations');
+const Calculation = require('./Models/Calculation');
 
 class Calculator {
-    Sum(a = null, b = null) {
-        if (Array.isArray(a)) {
-            return this.Result = MathOperations.Sum(a);
-
-        } else {
-            return this.Result = MathOperations.Sum(a, b);
-        }
+    static Sum(a, b) {
+        return new Calculation(a, b, "Sum");
     }
     Divide(a,b) {
         return this.Result = MathOperations.Quotient(a,b);
