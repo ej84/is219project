@@ -23,3 +23,5 @@ function Difference(a, b){
 
 This is one single operation for subtract and other related classes and files with importing this function can do the same one operation.
 
+# O - Open/Closed Principle
+
