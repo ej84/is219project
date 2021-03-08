@@ -8,10 +8,9 @@ class Calculation{
     }
 
     GetResults() {
-        return this.a + this.b;
+        return this.op(this.a, this.b);
     }
 
 
 }
-
 module.exports = Calculation;
