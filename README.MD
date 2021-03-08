@@ -5,7 +5,8 @@
 
 
 # SOLID Principles for Node JS
-# What is SOLID? SOLID is an acronym that stands for the first five OOD principles as outlined by renowned software engineer Robert C. Martin. The SOLID principles are designed to help developers design robust, maintainable applications.
+# What is SOLID?
+SOLID is an acronym that stands for the first five OOD principles as outlined by renowned software engineer Robert C. Martin. The SOLID principles are designed to help developers design robust, maintainable applications.
 
 # S - Single Responsibiliby Principle
 
