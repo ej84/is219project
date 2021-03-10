@@ -25,7 +25,7 @@ function Difference(a, b){
 This is one single operation for subtract and other related classes and files with importing this function can do the same one operation.
 
 # O - Open/Closed Principle
-The calculator.js file in the src directory plays typical role of this principle. I can put additional functions from other directories for math operation and result storage like below, but do not have to change anything in the files that the calculator file impored.
+The <a href="https://github.com/ej84/is219project/blob/master/src/Calculator.js">Calculator.js</a> file in the ```src``` directory plays typical role of this principle. I can put additional functions from other directories for math operation and result storage like below, but do not have to change anything in the files that the calculator file impored.
 
 ```Node JS
     static Sum(a, b) {
