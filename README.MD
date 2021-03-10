@@ -34,3 +34,24 @@ The <a href="https://github.com/ej84/is219project/blob/master/src/Calculator.js"
         return calculation.GetResults();
     }
  ```
+ 
+ # L - Liskov Substitution Principle
+ <a href="https://github.com/ej84/is219project/blob/master/src/Models/Calculation.js">The Calculation.js</a> in Models represent this principle. It can substitute every function for calculations regardless of what the operations does like adding or dividing. In other words, the Calculation works for the same function but returns different result depending on what type of calculation is done only.
+ 
+ ```Node JS
+ 
+    GetResults() {
+        return this.op(this.a, this.b);
+    }
+```
+
+# I - Interface Segregation Principle
+To implement the main Calculator as following rule of this principle, the constructor in the Calculation.js file is executed once Calculator.js file calls and imports it. It requires simply three main parameters a for the first number, b for the second number, and op for the operation reference.
+
+```Node JS
+    constructor(a, b, op) {
+        this.a = a;
+        this.b = b;
+        this.op = op;
+    }
+```
