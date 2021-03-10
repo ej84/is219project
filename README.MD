@@ -49,6 +49,8 @@ The <a href="https://github.com/ej84/is219project/blob/master/src/Calculator.js"
 To implement the main Calculator as following rule of this principle, the constructor in the Calculation.js file is executed once Calculator.js file calls and imports it. It requires simply three main parameters a for the first number, b for the second number, and op for the operation reference.
 
 ```Node JS
+
+class Calculation{
     constructor(a, b, op) {
         this.a = a;
         this.b = b;
