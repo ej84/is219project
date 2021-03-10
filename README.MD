@@ -27,7 +27,7 @@ This is one single operation for subtract and other related classes and files wi
 # O - Open/Closed Principle
 The calculator.js file in the src directory plays typical role of this principle. I can put additional functions from other directories for math operation and result storage like below, but do not have to change anything in the files that the calculator file impored.
 
-```
+```Node JS
     static Sum(a, b) {
         let calculation = new Calculation(a,b,Sum);
         Calculator.Calculations.push(calculation);
