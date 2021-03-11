@@ -25,13 +25,14 @@ function Difference(a, b){
 This is one single operation for subtract and other related classes and files with importing this function can do the same one operation.
 
 # O - Open/Closed Principle
-The <a href="https://github.com/ej84/is219project/blob/master/src/Calculator.js">Calculator.js</a> file in the ```src``` directory plays typical role of this principle. I can put additional functions from other directories for math operation and result storage like below, but do not have to change anything in the files that the calculator file impored.
+The <a href="https://github.com/ej84/is219project/blob/master/src/Calculator.js">Calculator.js</a> file in the ```src``` directory plays typical role of this principle. The Calculator contains methods like ```AddingCalc``` and ```Duplicate```, which can be called by functions imported while the Calculator class itself does not have to be modified for each function.
 
 ```Node JS
-    static Sum(a, b) {
-        let calculation = new Calculation(a,b,Sum);
-        Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+
+static duplicate(){
+        let newCalc = new Calculatior();
+        newCalc.Calculations = this.Calculations;
+        return newCalc;
     }
  ```
  
@@ -57,3 +58,6 @@ class Calculation{
         this.op = op;
     }
 ```
+
+# D - Dependency Inversion Principle
+
