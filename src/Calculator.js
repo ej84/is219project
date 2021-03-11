@@ -44,5 +44,24 @@ class Calculator {
         Calculator.Calculations.push(calculation);
         return calculation.GetResults();
     }
+
+    static ClearList() {
+        this.Calculations = [];
+    }
+
+    static AddingCalc(calculation){
+        this.Calculations.push(calculation);
+    }
+
+    static GetLastCalc(){
+        return this.Calculations[this.Calculations.length-1];
+    }
+
+    static duplicate(){
+        let newCalc = new Calculatior();
+        newCalc.Calculations = this.Calculations;
+        return newCalc;
+    }
+
 }
 module.exports = Calculator;
