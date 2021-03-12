@@ -102,6 +102,21 @@ constructor(a, b, op) {
         return this.op(this.a, this.b);
     }
 ```
-This constructor is called automatically by its class when you create an object with the calculation class and allows it to form the calculation and use the methods inside of the calculation class like ```GetResults()``` above.
+This constructor is called automatically by its class when you create an object with the calculation class and allows it to form the calculation and use the methods inside of the calculation class like ```GetResults()``` above. You do not have to change the original class for ```calculation``` in this way.
 
 ## Inheritance
+Inheritance refers to concept that a general class like the ```Calculation``` is extended to a specified class. This concept is useful when you need to write a class file that is based on general object but works for specifically defined function like the example below.
+```Node JS
+class gamescoreCalculation extends Calculation{
+  constructor(a, b, op, player){
+    super(a, b, op);
+    this.player = player;
+  }
+  GetScore(){
+    console.log(player + "'s score: " + super.GetResults());
+  }
+  
+}
+```
+
+## Polymorphism
