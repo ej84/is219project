@@ -60,4 +60,32 @@ class Calculation{
 ```
 
 # D - Dependency Inversion Principle
+According to this principle, a class is not supposed to depend on another class that is more sensitive to changes in implementation. Therefore, a method like below is dependant on the calculator class, wheares the calculator is not dependant on the calculation methods.
+
+```Node JS
+static Product(a, b) {
+        let calculation = new Calculation(a,b,Product);
+        Calculator.Calculations.push(calculation);
+        return calculation.GetResults();
+    }
+```
+
+# Object Oriented Programming Concepts
+
+## Encapsulation
+In javascript, encapsulation refers to restrcting data so that it cannot be accessed freely from outside of the function it is used. Only methods that are inside that function can use it for operation. If I rewrite my calculation class like below, it would be a good example of an encapsulation.
+```Node JS
+function calculation(a, b, op){
+  function result(){
+    return op(a, b);
+  }
+  return result;
+}
+```
+In this case, I can create a variable and assign argument for the function's parameter a, b, and op, such as:
+```Node JS
+let rootCalc = calculation(3, 5, Root);
+rootCalc();
+```
+The rootCalc will call the calculation function and return the result operated by Root, but the data inside the function is still private and not accessible.
 
