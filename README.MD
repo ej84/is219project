@@ -89,3 +89,19 @@ rootCalc();
 ```
 The rootCalc will call the calculation function and return the result operated by Root, but the data inside the function is still private and not accessible.
 
+## Abstraction
+Abstraction is a concept that creates a basic calculation object that can be used for more concrete definition and function. In this project, the constructor of calculation class represents this concept perfectly.
+```Node JS
+constructor(a, b, op) {
+
+        this.a = a;
+        this.b = b;
+        this.op = op;
+    }
+    GetResults() {
+        return this.op(this.a, this.b);
+    }
+```
+This constructor is called automatically by its class when you create an object with the calculation class and allows it to form the calculation and use the methods inside of the calculation class like ```GetResults()``` above.
+
+## Inheritance
