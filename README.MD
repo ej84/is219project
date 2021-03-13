@@ -120,4 +120,35 @@ class gamescoreCalculation extends Calculation{
 ```
 
 ## Polymorphism
- 
+ Polymorphism means "many forms" in simple word, and it can be achieved and found in the classes that are related to each other by inheritance. We already know that the inheritance helps a class derive other class' attribute and method, but polymorphism works a little bit differently. For example, here is a java class code regarding with the polymorphism.
+ ```Java
+ class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal();  // Create a Animal object
+    Animal myPig = new Pig();  // Create a Pig object
+    Animal myDog = new Dog();  // Create a Dog object
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+  }
+}
+```
+As you can see, the ```Pig``` and ```Dog``` classes inherit the Animal class' attribute and method, and the Animal class is used to create an Animal object as well as to create both a Pig and Dog object in the Main class. It is also possible for the Pig and Dog object to use the animalSound() method because they inherite the Animal class. This is how polymorphism helps  the interaction with the original class and subclasses that inherit it.
