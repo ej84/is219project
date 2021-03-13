@@ -152,3 +152,25 @@ class Main {
 }
 ```
 As you can see, the ```Pig``` and ```Dog``` classes inherit the Animal class' attribute and method, and the Animal class is used to create an Animal object as well as to create both a Pig and Dog object in the Main class. It is also possible for the Pig and Dog object to use the animalSound() method because they inherite the Animal class. This is how polymorphism helps  the interaction with the original class and subclasses that inherit it.
+
+# Design Patterns for OOP
+
+## Creational Pattern, prototype: ```duplicate``` in Calculator
+
+The ```duplicate()``` method in the ```Calculator``` can be an example of this pattern. To keep the calculation record that has been performed by the user every time they update the calculator object, they can make good use of this function to achieve that goal. You do not have to worry about creating a new object for calculator or calculation if you forget and lose the track of the calculation recording now that the ```duplicate()``` function clones the records of all calculations.
+
+## Structural pattern, facade: Calculator
+facade pattern is used to allow the users to approach an interface that provide the simplest way to use the program without having to performing complicated processes like implementing class for object creation, or importing a method to call. It still lets them choose what file name or path to enter to solve their problems with the facade structured interface. The code example from ```calculator.test.js``` below is a nice example to explain it:
+```Node JS
+const Calculation = require('./Models/Calculation');
+const Quotient = require('./Operations/Quotient');
+static Quotient(a, b) {
+        let calculation = new Calculation(a,b,Quotient);
+        Calculator.Calculations.push(calculation);
+        return calculation.GetResults();
+    }
+
+```
+As you can see, ```Calculation``` and ```Quotient``` classes are already imported and all the user has to do is to enter two specific numbers in calculation variable to create a calculation object with division operation and execute it.
+
+## Behavioral pattern, 
