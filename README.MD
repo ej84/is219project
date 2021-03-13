@@ -173,4 +173,61 @@ static Quotient(a, b) {
 ```
 As you can see, ```Calculation``` and ```Quotient``` classes are already imported and all the user has to do is to enter two specific numbers in calculation variable to create a calculation object with division operation and execute it.
 
-## Behavioral pattern, 
+## Behavioral pattern, strategy: Calculations in Calculator
+This pattern encapsulates calculation functions in a class and allows it to modify and replace the encapsulated functions to share or move it to the other classes relevant to it so they can solve the same problem in dynamic ways. Let's see how it works with the ```Calculator``` modified for strategic purpose in the example below.
+```Node JS
+class Calculator {
+    static Calculations = [];
+    
+    alt = "";
+    
+    
+    static CalcSetup(alt){
+      this.alt = alt;
+    }
+    
+    static AdvancedCalc(a, b){
+      this.AddingCalc(this.alt.AdvancedCalc(a, b));
+      return this.GetLastCalc();
+    }
+    
+    static ClearList() {
+        this.Calculations = [];
+    }
+
+    static AddingCalc(calculation){
+        this.Calculations.push(calculation);
+    }
+
+    static GetLastCalc(){
+        return this.Calculations[this.Calculations.length-1];
+    }
+
+    static duplicate(){
+        let newCalc = new Calculatior();
+        newCalc.Calculations = this.Calculations;
+        return newCalc;
+    }
+    
+    var SumSetup = function(){
+      this.alt = function(a, b){
+        return new Calculation(a, b, Sum);
+      }
+      
+    };
+    
+    var SqrSetup = function(){
+      this.alt = function(a,b){
+        return new Calculation(a, b, Power);
+      }
+    
+    };
+ 
+    
+    let calculator1 = new Calculator();
+    calculator1.CalcSetup(SumSetup);
+    calculator1.AdvancedCalc(2,9); = This will return 9 as Sus result.
+    calculator1.CalcSetup(SqrSetup); = This changes from Sum to Power calculation mode.
+    calculator1.AdvancedCalc(5, 5); = This will return 25 as Power result.
+
+```
