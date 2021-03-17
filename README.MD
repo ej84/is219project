@@ -35,10 +35,10 @@ static duplicate(){
         return newCalc;
     }
  ```
-
-# L - Liskov Substitution Principle
-<a href="https://github.com/ej84/is219project/blob/master/src/Models/Calculation.js">The Calculation.js</a> in Models represent this principle. It can substitute every function for calculations regardless of what the operations does like adding or dividing. In other words, the Calculation works for the same function but returns different result depending on what type of calculation is done only.
-
+ 
+ # L - Liskov Substitution Principle
+ <a href="https://github.com/ej84/is219project/blob/master/src/Models/Calculation.js">The Calculation.js</a> in Models represent this principle. It can substitute every function for calculations regardless of what the operations does like adding or dividing. In other words, the Calculation works for the same function but returns different result depending on what type of calculation is done only.
+ 
  ```Node JS
  
     GetResults() {
@@ -120,7 +120,7 @@ class gamescoreCalculation extends Calculation{
 ```
 
 ## Polymorphism
-Polymorphism means "many forms" in simple word, and it can be achieved and found in the classes that are related to each other by inheritance. We already know that the inheritance helps a class derive other class' attribute and method, but polymorphism works a little bit differently. For example, here is a java class code regarding with the polymorphism.
+ Polymorphism means "many forms" in simple word, and it can be achieved and found in the classes that are related to each other by inheritance. We already know that the inheritance helps a class derive other class' attribute and method, but polymorphism works a little bit differently. For example, here is a java class code regarding with the polymorphism.
  ```Java
  class Animal {
   public void animalSound() {
