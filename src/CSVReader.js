@@ -2,7 +2,7 @@ const parse = require('csv-parse/lib/sync');
 const fs = require('fs');
 
 class CSVReader{
-    static CSV_Read(filePath, modelType){
+    static getCSV(filePath, modelType){
         const options = {
             columns: true,
             delimiter: ',',
