@@ -19,3 +19,23 @@ test('CSV Reader model type', ()=>{
     })
 
 });
+
+test('CSV Reader creates populated model in the output', ()=> {
+    let output = CSVReader.getCSV('data/worldcities.csv', City);
+    expect(output[1]).toEqual(
+        expect.objectContaining({
+            admin_name: 'New York',
+            capital: '',
+            city: 'New York',
+            city_ascii: 'New York',
+            country: 'United States',
+            id: '1840034016',
+            iso2: 'US',
+            iso3: 'USA',
+            lat: '40.6943',
+            lng: '-73.9249',
+            population: '19354922.0'
+
+        })
+    );
+});
